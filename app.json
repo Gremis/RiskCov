@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "riskcov",
+    "slug": "riskcov",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "riskcov"
+}
