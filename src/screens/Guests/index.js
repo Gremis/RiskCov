@@ -197,6 +197,14 @@ const GuestsScreen = props => {
                 params: {
                   geometry: geometry,
                   country: country,
+                  guests: {
+                    adults: adults,
+                    olderAdults: olderAdults,
+                    disabilities: disabilities,
+                    olderAdultsDisabilities: olderAdultsDisabilities,
+                    childrenDisabilities: childrenDisabilities,
+                    pregnants: pregnants,
+                  },
                 },
               },
             })

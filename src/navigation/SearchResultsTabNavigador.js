@@ -12,7 +12,7 @@ const SearchResultsTabNavigator = () => {
   const [cases, setCases] = useState({});
   const [mobility, setMobility] = useState({});
   const [population, setPopulation] = useState({});
-  const {geometry, country} = route.params;
+  const {geometry, country, guests} = route.params;
 
   const getFromApi = async (country, type) => {
     fetch(`https://eodashboard.org/eodash-data/internal/${country}-OW.json`)
@@ -70,6 +70,7 @@ const SearchResultsTabNavigator = () => {
             cases={cases}
             mobility={mobility}
             population={population}
+            guests={guests}
           />
         )}
       </Tab.Screen>
