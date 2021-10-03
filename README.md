@@ -78,3 +78,6 @@ https://reactnative.dev/docs/environment-setup
 ## Finally
 
 The functioning of this application can be seen below:
+
+
+![](assets/function.gif)
