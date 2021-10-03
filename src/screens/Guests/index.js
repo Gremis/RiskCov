@@ -47,7 +47,7 @@ const GuestsScreen = props => {
           <View style={styles.row}>
             <Pressable
               style={styles.button}
-              onPress={() => setAdults(Math.max(0, olderAdults - 1))}>
+              onPress={() => setOlderadults(Math.max(0, olderAdults - 1))}>
               <Text style={styles.buttonAge}>-</Text>
             </Pressable>
             <Text style={{ marginHorizontal: 20, fontSize: 16 }}>
@@ -98,7 +98,7 @@ const GuestsScreen = props => {
             <Pressable
               style={styles.button}
               onPress={() =>
-                setAdults(Math.max(0, olderAdultsDisabilities - 1))
+                setOlderAdultsDisabilities(Math.max(0, olderAdultsDisabilities - 1))
               }>
               <Text style={styles.buttonAge}>-</Text>
             </Pressable>

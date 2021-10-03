@@ -40,7 +40,7 @@ const HomeTabNavigator = () => {
         component={InformationScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="user" size={25} color={color} />
+            <MaterialCommunityIcons name="information" size={25} color={color} />
           ),
         }}
       />

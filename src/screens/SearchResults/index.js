@@ -1,9 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Image, Text} from 'react-native';
 import styles from './styles.js';
+const low = require('../../../assets/images/low.jpeg');
+const moderate = require('../../../assets/images/moderate.jpeg');
+const high = require('../../../assets/images/high.jpeg');
+const severe = require('../../../assets/images/severe.jpeg');
 
 const SearchResultsScreen = props => {
   const {vaccinates, cases, mobility, population, guests} = props;
+  const [finalRisk, setFinalRisk] = useState('');
+  const [finalAdvice, setFinalAdvice] = useState('');
   const {
     adults,
     olderAdults,
@@ -27,8 +33,6 @@ const SearchResultsScreen = props => {
     olderAdultsDisabilities +
     childrenDisabilities +
     pregnants;
-  const risk = '';
-  const advice = '';
   const mediaMobility =
     grocery +
     parks +
@@ -40,7 +44,10 @@ const SearchResultsScreen = props => {
   const mediaVaccinates = (vaccinates.people_vaccinated / population.SUM) * 100;
 
   useEffect(() => {
-    if (mediaMobility < -40 && mediaCases < 20 && mediaVaccinates > 80) {
+    let risk = '';
+    let advice = '';
+
+    if (mediaMobility < -10 && mediaCases < 20 && mediaVaccinates > 80) {
       risk = 'low';
       advice =
         'This place is look to be safe, however is good to have prevent measures';
@@ -74,15 +81,34 @@ const SearchResultsScreen = props => {
       risk = 'severe';
       advice = 'At least it is a emergency, dont go out of your house';
     }
-  }, []);
+
+    setFinalAdvice(advice);
+    setFinalRisk(risk);
+  }, [props]);
+
+  const getImage = type => {
+    switch (type) {
+      case 'low':
+        return low;
+      case 'moderate':
+        return moderate;
+      case 'high':
+        return high;
+      case 'severe':
+        return severe;
+    }
+  };
 
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.image}
-        source={require(`../../../assets/images/${risk}.jpeg`)}
-      />
-      <Text style={styles.risks}>{advice}</Text>
+      {finalRisk != '' && finalAdvice != '' ? (
+        <>
+          <Image style={styles.image} source={getImage(finalRisk)} />
+          <Text style={styles.risks}>{finalAdvice}</Text>
+        </>
+      ) : (
+        <></>
+      )}
     </View>
   );
 };

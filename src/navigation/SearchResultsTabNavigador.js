@@ -15,18 +15,18 @@ const SearchResultsTabNavigator = () => {
   const {geometry, country, guests} = route.params;
 
   const getFromApi = async (country, type) => {
-    fetch(`https://eodashboard.org/eodash-data/internal/${country}-OW.json`)
+    fetch(`https://eodashboard.org/eodash-data/internal/${country}-${type}.json`)
       .then(response => response.json())
       .then(json => {
         const value = json.Values[json.Values.length - 1];
         switch (type) {
-          case `vaccinate`:
+          case `OW`:
             setVaccinates(value);
             break;
-          case `cases`:
+          case `CV`:
             setCases(value);
             break;
-          case `mobility`:
+          case `GG`:
             setMobility(value);
             break;
         }
@@ -49,9 +49,9 @@ const SearchResultsTabNavigator = () => {
   };
 
   useEffect(() => {
-    getFromApi(country, `vaccinate`);
-    getFromApi(country, `cases`);
-    getFromApi(country, `mobility`);
+    getFromApi(country, `OW`);
+    getFromApi(country, `CV`);
+    getFromApi(country, `GG`);
     getCountryCodeFromApi();
   }, []);
 
