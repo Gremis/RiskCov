@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import {View, Text, Pressable} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Pressable } from 'react-native';
 import styles from './styles.js';
-import {useNavigation, useRoute} from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 const GuestsScreen = props => {
   const [adults, setAdults] = useState(0);
@@ -14,15 +14,15 @@ const GuestsScreen = props => {
 
   const navigation = useNavigation();
   const route = useRoute();
-  const {geometry, country} = route.params;
+  const { geometry, country } = route.params;
 
   return (
-    <View style={{justifyContent: 'space-between', height: '100%'}}>
+    <View style={{ justifyContent: 'space-between', height: '100%' }}>
       <View>
         <View style={styles.container}>
           <View>
-            <Text style={{fontWeight: 'bold'}}>Adults</Text>
-            <Text style={{color: '#8d8d8d'}}>Ages 13 or above</Text>
+            <Text style={{ fontWeight: 'bold' }}>Adults</Text>
+            <Text style={{ color: '#8d8d8d', fontSize: 12 }}>Ages 13 or above</Text>
           </View>
           <View style={styles.row}>
             <Pressable
@@ -30,7 +30,7 @@ const GuestsScreen = props => {
               onPress={() => setAdults(Math.max(0, adults - 1))}>
               <Text style={styles.buttonAge}>-</Text>
             </Pressable>
-            <Text style={{marginHorizontal: 20, fontSize: 16}}>{adults}</Text>
+            <Text style={{ marginHorizontal: 20, fontSize: 16 }}>{adults}</Text>
             <Pressable
               style={styles.button}
               onPress={() => setAdults(adults + 1)}>
@@ -41,8 +41,8 @@ const GuestsScreen = props => {
 
         <View style={styles.container}>
           <View>
-            <Text style={{fontWeight: 'bold'}}>Older Adults</Text>
-            <Text style={{color: '#8d8d8d'}}>Ages 60 or above</Text>
+            <Text style={{ fontWeight: 'bold' }}>Older Adults</Text>
+            <Text style={{ color: '#8d8d8d', fontSize: 12 }}>Ages 60 or above</Text>
           </View>
           <View style={styles.row}>
             <Pressable
@@ -50,7 +50,7 @@ const GuestsScreen = props => {
               onPress={() => setAdults(Math.max(0, olderAdults - 1))}>
               <Text style={styles.buttonAge}>-</Text>
             </Pressable>
-            <Text style={{marginHorizontal: 20, fontSize: 16}}>
+            <Text style={{ marginHorizontal: 20, fontSize: 16 }}>
               {olderAdults}
             </Text>
             <Pressable
@@ -63,11 +63,9 @@ const GuestsScreen = props => {
 
         <View style={styles.container}>
           <View>
-            <Text style={{fontWeight: 'bold'}}>Adults with conditions</Text>
-            <Text style={{color: '#8d8d8d'}}>
-              Carriers of chronic diseases, such as diabetes and hypertension,
-              asthma, chronic obstructive pulmonary disease, and individuals who
-              smoke
+            <Text style={{ fontWeight: 'bold' }}>Adults with conditions</Text>
+            <Text style={{ color: '#8d8d8d', fontSize: 12 }}>
+              Includes diseases, disabilities...
             </Text>
           </View>
           <View style={styles.row}>
@@ -76,7 +74,7 @@ const GuestsScreen = props => {
               onPress={() => setDisabilities(Math.max(0, disabilities - 1))}>
               <Text style={styles.buttonAge}>-</Text>
             </Pressable>
-            <Text style={{marginHorizontal: 20, fontSize: 16}}>
+            <Text style={{ marginHorizontal: 20, fontSize: 16 }}>
               {disabilities}
             </Text>
             <Pressable
@@ -89,11 +87,11 @@ const GuestsScreen = props => {
 
         <View style={styles.container}>
           <View>
-            <Text style={{fontWeight: 'bold'}}>
+            <Text style={{ fontWeight: 'bold' }}>
               Older adults with conditions
             </Text>
-            <Text style={{color: '#8d8d8d'}}>
-              Older adults who smoke or have any health condition
+            <Text style={{ color: '#8d8d8d', fontSize: 12 }}>
+              Includes diseases, disabilities...
             </Text>
           </View>
           <View style={styles.row}>
@@ -104,7 +102,7 @@ const GuestsScreen = props => {
               }>
               <Text style={styles.buttonAge}>-</Text>
             </Pressable>
-            <Text style={{marginHorizontal: 20, fontSize: 16}}>
+            <Text style={{ marginHorizontal: 20, fontSize: 16 }}>
               {olderAdultsDisabilities}
             </Text>
             <Pressable
@@ -119,8 +117,8 @@ const GuestsScreen = props => {
 
         <View style={styles.container}>
           <View>
-            <Text style={{fontWeight: 'bold'}}>Childrens</Text>
-            <Text style={{color: '#8d8d8d'}}>Ages 0 - 12</Text>
+            <Text style={{ fontWeight: 'bold' }}>Childrens</Text>
+            <Text style={{ color: '#8d8d8d', fontSize: 12 }}>Ages 0 - 12</Text>
           </View>
           <View style={styles.row}>
             <Pressable
@@ -128,7 +126,7 @@ const GuestsScreen = props => {
               onPress={() => setChildrens(Math.max(0, childrens - 1))}>
               <Text style={styles.buttonAge}>-</Text>
             </Pressable>
-            <Text style={{marginHorizontal: 20, fontSize: 16}}>
+            <Text style={{ marginHorizontal: 20, fontSize: 16 }}>
               {childrens}
             </Text>
             <Pressable
@@ -141,7 +139,7 @@ const GuestsScreen = props => {
 
         <View style={styles.container}>
           <View>
-            <Text style={{fontWeight: 'bold'}}>Pregnants</Text>
+            <Text style={{ fontWeight: 'bold' }}>Pregnants</Text>
           </View>
           <View style={styles.row}>
             <Pressable
@@ -149,7 +147,7 @@ const GuestsScreen = props => {
               onPress={() => setPregnants(Math.max(0, pregnants - 1))}>
               <Text style={styles.buttonAge}>-</Text>
             </Pressable>
-            <Text style={{marginHorizontal: 20, fontSize: 16}}>
+            <Text style={{ marginHorizontal: 20, fontSize: 16 }}>
               {pregnants}
             </Text>
             <Pressable
@@ -162,8 +160,8 @@ const GuestsScreen = props => {
 
         <View style={styles.container}>
           <View>
-            <Text style={{fontWeight: 'bold'}}>Childrens with conditions</Text>
-            <Text style={{color: '#8d8d8d'}}>
+            <Text style={{ fontWeight: 'bold' }}>Childrens with conditions</Text>
+            <Text style={{ color: '#8d8d8d', fontSize: 12 }}>
               Includes diseases, disabilities...
             </Text>
           </View>
@@ -175,7 +173,7 @@ const GuestsScreen = props => {
               }>
               <Text style={styles.buttonAge}>-</Text>
             </Pressable>
-            <Text style={{marginHorizontal: 20, fontSize: 16}}>
+            <Text style={{ marginHorizontal: 20, fontSize: 16 }}>
               {childrenDisabilities}
             </Text>
             <Pressable

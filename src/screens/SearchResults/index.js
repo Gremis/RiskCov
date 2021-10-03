@@ -80,9 +80,7 @@ const SearchResultsScreen = props => {
     <View style={styles.container}>
       <Image
         style={styles.image}
-        source={{
-          uri: `../../../assets/images/${risk}.jpg`,
-        }}
+        source={require(`../../../assets/images/${risk}.jpeg`)}
       />
       <Text style={styles.risks}>{advice}</Text>
     </View>

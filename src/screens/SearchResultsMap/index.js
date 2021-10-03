@@ -2,7 +2,6 @@ import React, {useState, useEffect, useRef} from "react";
 import { View, FlatList, useWindowDimensions } from "react-native";
 import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
 import CustomMarker from "../../components/CustomMarker";
-import PostCarouselItem from "../../components/PostCarouselItem";
 
 
 const SearchResultsMaps = (props) =>{

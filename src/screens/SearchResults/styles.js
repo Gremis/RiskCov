@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
         margin: 20,
     },
     image: {
-        width: "100%",
+        width: "80%",
         aspectRatio: 3 / 2,
         resizeMode: "cover",
         borderRadius: 10,

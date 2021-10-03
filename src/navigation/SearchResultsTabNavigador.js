@@ -63,7 +63,7 @@ const SearchResultsTabNavigator = () => {
           backgroundColor: '#f15454',
         },
       }}>
-      <Tab.Screen name={'info'}>
+      <Tab.Screen name={'details'}>
         {() => (
           <SearchResults
             vaccinates={vaccinates}
