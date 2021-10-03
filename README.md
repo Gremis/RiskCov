@@ -1,11 +1,23 @@
-<h2 align="center">RiskCov</h2>
+<h2 align="center">NASA Space Apps Challenge 2021 - RiskCov</h2>
+
+<h3 align="center">
+    <img alt="riskcov"
+    src="https://github.com/jackomo007/RiskCov/blob/main/assets/images/d.png" width="380px"/>
+    <img alt="riskcov"
+    src="https://github.com/jackomo007/RiskCov/blob/main/assets/images/pentium.png" width="380px"/>
+</h3>
 
 <hr/>
+
+## ⚙️ Team Name: 
+- Pentium
 
 ## ⚙️ Team Members: 
 - [José Prieto](https://github.com/jackomo007)
 - [Gremis Tovar](https://github.com/Gremis)
 
+## ⚙️ Challenge: 
+- COVID-19: Calculate the risk
 
 ## ⚙️ What works:
 - Search for countries using google maps
