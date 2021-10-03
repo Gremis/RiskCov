@@ -80,4 +80,4 @@ https://reactnative.dev/docs/environment-setup
 The functioning of this application can be seen below:
 
 
-![](assets/function.gif)
+https://github.com/jackomo007/RiskCov/blob/main/assets/images/funtion.gif
