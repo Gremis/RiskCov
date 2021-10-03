@@ -1,18 +1,16 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ExploreNavigator from './ExploreNavigator';
-import HomeScreen from '../screens/Home';
 import NewsScreen from '../screens/News';
-import ProfileScreen from '../screens/Profile';
+import InformationScreen from '../screens/Information';
 import Fontisto from 'react-native-vector-icons/Fontisto';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Feather from 'react-native-vector-icons/Feather';
-import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 const Tab = createBottomTabNavigator();
 
-const HomeTabNavigator = (props) => {
+const HomeTabNavigator = () => {
   return (
     <Tab.Navigator
     screenOptions={{
@@ -38,11 +36,11 @@ const HomeTabNavigator = (props) => {
         }}
       />
       <Tab.Screen
-        name={'Profile'}
-        component={ProfileScreen}
+        name={'Information'}
+        component={InformationScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <EvilIcons name="user" size={25} color={color} />
+            <MaterialCommunityIcons name="user" size={25} color={color} />
           ),
         }}
       />

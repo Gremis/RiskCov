@@ -17,9 +17,7 @@ const SearchResultsScreen = props => {
     <View style={styles.container}>
       <Image
         style={styles.image}
-        source={{
-          uri: 'https://www.atlas-mag.net/sites/default/files/images/AtlasMagazine_2017-03_No139/en/focus2.png',
-        }}
+        source={require("../../../assets/images/high.jpeg")}
       />
       <Text style={styles.risks}> DONDE OCURRE LA MAGIA</Text>
     </View>
