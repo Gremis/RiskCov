@@ -46,11 +46,19 @@ cd `RiskCov` and run:
 npm install
 ```
 
+```bash
+npm start
+```
+
 init em Android:
 
 ```bash
 react-native run-android
 ```
+
+If you have a problem, you can try to find help here:
+
+https://reactnative.dev/docs/environment-setup
 
 <br/>
 
