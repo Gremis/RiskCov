@@ -2,14 +2,15 @@
 
 <h3 align="center">
     <img alt="riskcov"
-    src="https://github.com/jackomo007/RiskCov/blob/main/assets/images/d.png" width="380px"/>
-    <img alt="riskcov"
-    src="https://github.com/jackomo007/RiskCov/blob/main/assets/images/pentium.png" width="380px"/>
+    src="https://github.com/jackomo007/RiskCov/blob/main/assets/images/d.png" width="280px"/>
+   
 </h3>
 
 <hr/>
 
 ## ⚙️ Team Name: 
+ <img alt="riskcov"
+    src="https://github.com/jackomo007/RiskCov/blob/main/assets/images/pentium.png" width="280px"/>
 - Pentium
 
 ## ⚙️ Team Members: 
