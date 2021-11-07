@@ -11,6 +11,8 @@
 ## ⚙️ Team Name: 
  <img alt="riskcov"
     src="https://github.com/jackomo007/RiskCov/blob/main/assets/images/pentium.png" width="280px"/>
+ <img alt="premio"
+    src="https://github.com/jackomo007/RiskCov/blob/main/assets/images/premio.png" width="280px"/>
 - Pentium
 
 ## ⚙️ Team Members: 
